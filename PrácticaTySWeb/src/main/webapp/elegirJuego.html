@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Elegir Juego</title>
+<link rel="stylesheet" href="Resources/styleGame.css">
+<link rel="stylesheet" href="Resources/font.css">
+<link
+	href="https://fonts.googleapis.com/css?family=Comfortaa|Indie+Flower"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script
+	src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script>
+</head>
+<body cz-shortcut-listen="true">
+	<div class="contenedor" data-ng-app="GameApp"
+		data-ng-controller="GameController">
+
+		<header>
+			<h1 class="title" style="margin: 10px 5px 0px 10px;">Tecnologías y Sistemas Web</h1>
+			<input type="image" src="Resources/user.png" alt="User" width="40" height="40">
+		</header>
+
+		<div class="game" style="width: 40%;">
+			<article class="fondo"
+				style="margin-top: 50px; margin-bottom: 230px;">
+				<h3>Elige un juego:</h3>
+
+				<div class="row" style="width: 100%;">
+					<div class="col-md-4" style="padding-right:0px;">
+						<img type="image" src="Resources/piedra_papel_tijera.png" style="width: 60%;margin-top: 25px;border: 0px;margin-left: 20px;">
+					</div>
+					<div class="col-md-8" style="padding-left:0px;">
+						<button class="boton">PIEDRA, PAPEL, TIJERA</button>
+					</div>
+				</div>
+				
+				<div class="row" style="width: 100%;">
+					<div class="col-md-4" style="padding-right:0px;">
+						<img type="image" src="Resources/letras.png" style="border-radius:0px;width: 60%;margin-top: 25px;border: 0px;margin-left: 20px;">
+					</div>
+					<div class="col-md-8" style="padding-left:0px;">
+						<button class="boton">DESTAPE DE LETRAS</button>
+					</div>
+				</div>
+
+			</article>
+		</div>
+	</div>
+</body>
+</html>

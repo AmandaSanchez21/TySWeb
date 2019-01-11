@@ -263,3 +263,8 @@ header a:hover{
 form {
 	margin-left: 50px;
 }
+
+#image:hover {
+	width: 90px;
+	height: 90px;
+}

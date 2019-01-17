@@ -1,3 +1,4 @@
+<
 <!DOCTYPE html>
 <html>
 
@@ -11,9 +12,19 @@
 	rel="stylesheet">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="face.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	
 </head>
 <body>
-	<div class="contenedor" data-ng-app="LoginApp"
+<div class="contenedor" data-ng-app="LoginApp"
 		data-ng-controller="LoginController">
 
 		<header>
@@ -33,12 +44,29 @@
 						href="resetpassword.html" class="he">He olvidado mi contraseña</a>
 					<button class="boton" onclick="login()">Iniciar sesión</button>
 				</div>
+				<a href="#" id="login" class="btn btn-primary">Iniciar sesión con Facebook</a>
 			</article>
 		</div>
 	</div>
 
 	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+	</script>
+
+
+
+<script>
+	// Load the SDK asynchronously
+	  (function(d, s, id) {
+	    var js, fjs = d.getElementsByTagName(s)[0];
+	    if (d.getElementById(id)) return;
+	    js = d.createElement(s); js.id = id;
+	    js.src = "//connect.facebook.net/en_US/sdk.js";
+	    fjs.parentNode.insertBefore(js, fjs);
+	  }(document, 'script', 'facebook-jssdk'));
+	 </script>
+
+
 	<script>
 		function login() {
 			var p = {
@@ -47,11 +75,12 @@
 			};
 			$.post("/login", p, function(respuesta, estado) {
 				if (estado == "success") {
-					window.location = "indexppt.html"
+					window.location = "elegirJuego.html"
 					sessionStorage.userName = respuesta.userName;
 				}
 			});
+			
 		}
 	</script>
 </body>
-</html>
+</html>	

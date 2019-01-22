@@ -51,5 +51,9 @@ public class Manager {
 		return player.move(iC);
 		
 	}
+	
+	public void recuperarPWD (String email) throws Exception {
+		UsuarioRegistrado.recuperarPWD(email);
+	}
 
 }
